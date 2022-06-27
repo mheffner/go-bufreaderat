@@ -23,11 +23,6 @@ func (b *BufferReaderAt) ReadAt(p []byte, off int64) (n int, err error) {
 		return -1, ErrInvalidSeek
 	}
 
-	toRead := int64(len(p))
-	if b.size()-off < toRead {
-		toRead = b.size() - off
-	}
-
 	rd := copy(p, b.Buf[off:])
 	if rd < len(p) {
 		// docs say this must return an error if we read less than p
