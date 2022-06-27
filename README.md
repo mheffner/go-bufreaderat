@@ -18,7 +18,7 @@ Example:
 
 ```go
 	buf := []byte("helloworld")
-	b := BufferReaderAt{Buf: buf}
+	b := bufreaderat.BufferReaderAt{Buf: buf}
 
 	var _ io.ReaderAt = &b
 	var _ io.ReadSeeker = &b
