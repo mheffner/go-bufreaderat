@@ -1,5 +1,7 @@
 # go-bufreaderat
 
+## NOTICE: This is deprecated, recommend to use the built-in [`bytes.Reader`](https://pkg.go.dev/bytes#Reader) instead.
+
 This library provides a zero-copy implementation of the [`io.ReaderAt`](https://pkg.go.dev/io#ReaderAt)
 and [`io.ReadSeeker`](https://pkg.go.dev/io#ReadSeeker)
 interfaces for a `byte[]` slice. For example, this can provide an efficient method when
